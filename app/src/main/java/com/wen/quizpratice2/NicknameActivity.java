@@ -26,6 +26,14 @@ public class NicknameActivity extends AppCompatActivity {
         next = findViewById(R.id.next);
     }
     public void next(View view){
+        String n = nickname.getText().toString();
+        /*
+                String n = getSharedPreferences("NICKNAME",MODE_PRIVATE)
+                .edit()
+                .putString("nickname"," ")
+                .apply();
+                */
+        nickname.setText(n);
         Intent infointent = new Intent(this,InfoActivity.class);
         startActivity(infointent);
         finish();
